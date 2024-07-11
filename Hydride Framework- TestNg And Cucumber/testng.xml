@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LeafTabsExecution" parallel = "tests" thread-count="2" verbose="5">
+<listeners>
+<listener class-name= "retry.FailedRetry"></listener>
+</listeners>
+
+	<test  name="ChromeTabsTest"  >
+	<parameter name= "Browser" value= "Chrome"></parameter>
+		<classes>
+			<class name="testcases.TC_001CreatLead" />
+			<!-- <class name="testcases.TC_001EditLead" />
+			<class name="testcases.TC_001DeleteLead" />
+			<class name="testcases.TC_001MergeLead" /> -->
+		</classes>
+	</test> <!-- Test -->
+	<!-- 
+	<test  name="EdgeTabsTest" >
+	<parameter name= "Browser" value= "Edge"></parameter>
+		<classes>
+			<class name="testcases.TC_001CreatLead" />
+			<class name="testcases.TC_001EditLead" />
+			<class name="testcases.TC_001DeleteLead" />
+			<class name="testcases.TC_001MergeLead" />
+		</classes>
+	</test> Test -->
+</suite> <!-- Suite -->
